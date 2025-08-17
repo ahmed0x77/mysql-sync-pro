@@ -1,10 +1,10 @@
-# SCSC - Smart, Concurrent Database Synchronization for MySQL
+# MySQL Sync Pro — Smart, Concurrent Database Synchronization for MySQL
 
 A high-performance, parallel utility for synchronizing MySQL databases, designed for efficiency and reliability.
 
 ## Overview
 
-SCSC (Smart, Concurrent Sync) is a Python-based tool that provides a robust solution for synchronizing data between two MySQL databases. It is built with performance in mind, leveraging parallel processing to handle multiple tables at once. The tool features an intelligent change detection mechanism that can use either the MySQL binlog for high-speed checks or a content-based signature for environments where the binlog is not available.
+MySQL Sync Pro is a Python-based tool that provides a robust solution for synchronizing MySQL databases. It is built with performance in mind, leveraging parallel processing to handle multiple tables at once. The tool features an intelligent change detection mechanism that can use either the MySQL binlog for high-speed checks or a content-based signature for environments where the binlog is not available.
 
 ## Key Features
 
