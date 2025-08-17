@@ -4,8 +4,11 @@ Simple MySQL Sync Runner as importable function.
 """
 
 import os
+from dotenv import load_dotenv
 from src.sync import sync_mysql
 
+# Load environment variables from .env file
+load_dotenv()
 
 def run_default_sync() -> None:
     local_url = os.getenv("DEV_DB_URL")

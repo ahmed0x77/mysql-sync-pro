@@ -5,8 +5,11 @@ Auto Think: Simple loop that runs sync_mysql.sync_mysql() on an interval.
 
 import os
 import time
+from dotenv import load_dotenv
 from src.sync import sync_mysql
 
+# Load environment variables from .env file
+load_dotenv()
 
 INTERVAL_SECS = int(os.getenv("AUTO_THINK_INTERVAL_SECS", "1"))
 

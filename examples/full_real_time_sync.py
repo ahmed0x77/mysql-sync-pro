@@ -6,6 +6,7 @@ Auto Think: Simple loop that runs sync_mysql.sync_mysql() on an interval.
 import os
 import time
 import threading
+from dotenv import load_dotenv
 from src.sync import sync_mysql
 from utils.change_detector import (
     has_database_changes,
@@ -13,6 +14,9 @@ from utils.change_detector import (
     save_current_signature,
     get_state_file_for_database,
 )
+
+# Load environment variables from .env file
+load_dotenv()
 
 INTERVAL_SECS = int(os.getenv("AUTO_THINK_INTERVAL_SECS", "1"))
 sync_lock = threading.Lock()
