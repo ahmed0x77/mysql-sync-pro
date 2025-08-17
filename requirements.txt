@@ -1,0 +1,9 @@
+# Core database dependencies
+SQLAlchemy>=2.0.0
+PyMySQL>=1.0.0
+
+# Environment variable management (optional but recommended)
+python-dotenv>=1.0.0
+
+# Type hints support (for better development experience)
+typing-extensions>=4.0.0
