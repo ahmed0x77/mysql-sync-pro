@@ -2,6 +2,8 @@
 
 A high-performance, parallel utility for synchronizing MySQL databases, designed for efficiency and reliability.
 
+![MySQL Sync Pro GUI](screenshots/ScreenShot_GUI.png)
+
 ## Overview
 
 MySQL Sync Pro is a Python-based tool that provides a robust solution for synchronizing MySQL databases. It is built with performance in mind, leveraging parallel processing to handle multiple tables at once. The tool features an intelligent change detection mechanism that can use either the MySQL binlog for high-speed checks or a content-based signature for environments where the binlog is not available.
@@ -76,6 +78,31 @@ For keeping two databases in a constant, real-time synchronized state, use the `
 ```bash
 python examples/full_real_time_sync.py
 ```
+
+### Advanced GUI Application
+
+For a comprehensive desktop application with modern UI/UX, use the advanced GUI:
+
+```bash
+# Install GUI dependencies
+pip install customtkinter
+
+# Run the GUI
+python run_gui.py
+# or
+python examples/advanced_gui.py
+```
+
+The GUI provides:
+
+- **Visual Database Configuration**: Easy setup of source and target databases
+- **Multiple Sync Modes**: One-time, auto-sync, and bi-directional synchronization
+- **Real-time Controls**: Start/stop sync operations with visual feedback
+- **Direction Swapping**: Easy reverse/forward direction controls
+- **Live Logging**: Real-time sync status and error reporting
+- **Settings Persistence**: Automatically saves your configuration
+- **Connection Testing**: Test database connections before syncing
+- **Progress Tracking**: Visual progress bars and status indicators
 
 ## Configuration
 

@@ -488,7 +488,7 @@ def sync_mysql(
     dry_run: bool = False,
     keep_fk_checks: bool = False,
     no_insert_ignore: bool = False,
-    allow_mysql_port_5432: bool = False,
+    allow_mysql_port_5432: bool = True,
     max_workers: Optional[int] = None,
     verbosity: int = 1,
     change_detector: bool = True,
