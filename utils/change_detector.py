@@ -24,7 +24,10 @@ def get_state_file_for_database(database_url: str) -> Path:
     """
     md5_hash = hashlib.md5(database_url.encode('utf-8')).hexdigest()
     state_filename = f".sync_db_{md5_hash[:20]}.state"
-    return Path(state_filename)
+    # Create .state directory if it doesn't exist
+    state_dir = Path(".state")
+    state_dir.mkdir(exist_ok=True)
+    return state_dir / state_filename
 
 
 def get_binlog_signature(engine: Engine) -> str:

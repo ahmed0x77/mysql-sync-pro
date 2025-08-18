@@ -276,7 +276,10 @@ def upsert_rows(
 
 
 # ---------- Fast change detection (built-in short-circuit) ----------
-STATE_FILE = Path(".sync_local.state")
+# Create .state directory if it doesn't exist
+state_dir = Path(".state")
+state_dir.mkdir(exist_ok=True)
+STATE_FILE = state_dir / ".sync_local.state"
 
 
 def get_binlog_signature(engine: Engine) -> str:
