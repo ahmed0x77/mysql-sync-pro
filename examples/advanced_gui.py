@@ -550,6 +550,7 @@ class DatabaseSyncGUI:
                     prod_url=prod_url_sync,
                     allow_mysql_port_5432=True,
                     verbosity=1,
+                    change_detector=False, # force sync
                 )
                 
                 self.log_message("One-time sync completed successfully", "SUCCESS")
